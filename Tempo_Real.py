@@ -3,7 +3,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 # Carrega modelo
-model = YOLO("pesos/best.pt")
+model = YOLO("pesos/best100.pt")
 
 # Abre câmera
 cap = cv2.VideoCapture(1)

@@ -1,0 +1,4 @@
+car: 1
+bottle: 1
+clock: 3
+traffic light: 1

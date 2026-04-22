@@ -4,10 +4,10 @@ import os
 from collections import Counter
 
 # Carrega modelo
-model = YOLO("pesos/best.pt")
+model = YOLO("pesos/best100.pt")
 
 # Caminho da imagem
-image_path = "img/eu.png"
+image_path = "img/varios.png"
 
 # Pasta de saída
 output_dir = "resultados"
