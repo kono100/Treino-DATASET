@@ -1,5 +1,3 @@
-
-
 Durante o treinamento do modelo YOLO, além dos hiperparâmetros configuráveis, existem métricas exibidas a cada época que indicam a evolução do aprendizado. Essas métricas são fundamentais para diagnosticar se o modelo está melhorando ou apresentando problemas.
 
 Principais métricas do treinamento (log por época):
