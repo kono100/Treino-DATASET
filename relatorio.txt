@@ -27,7 +27,14 @@ Se métricas variam muito → dataset pequeno ou desbalanceado.
 
 Resumo: métricas como box_loss, cls_loss e dfl_loss indicam o aprendizado interno, enquanto precisão, recall e mAP mostram a qualidade final; acompanhar a queda dos losses e o aumento do mAP é essencial para validar um bom treinamento.
 
+
+
+
 OBSERVAÇÃO 
+
+
+
+
 
 TREIANMENTO DE 15 EPOCAS SEM augmentations
 
@@ -52,6 +59,11 @@ Qualidade: 46.5%
 
 
 
+
+
+
+
+
 TREIANMENTO DE 15 EPOCAS com augmentations
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
@@ -72,3 +84,75 @@ Precisão: 0.669
 Recall: 0.615
 Qualidade: 45.8%
 ==========================
+
+
+
+
+
+
+
+
+
+TREIANMENTO DE 50 EPOCAS sem augmentations
+
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      49/50      4.48G     0.9232     0.8988   0.002693          9        640: 100% ━━━━━━━━━━━━ 8/8 3.2it/s 2.5s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 4.4it/s 0.2s
+                   all         14        247      0.781      0.765      0.821      0.595
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      50/50      4.48G     0.9019     0.9989   0.002496          3        640: 100% ━━━━━━━━━━━━ 8/8 3.4it/s 2.3s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 7.6it/s 0.1s
+                   all         14        247      0.773      0.769      0.819       0.59
+
+
+===== RESULTADO FINAL =====
+mAP50-95: 0.597
+Precisão: 0.796
+Recall: 0.733
+Qualidade: 59.7%
+==========================
+
+
+===== RESUMO Predição =====
+0% a 20%: 0
+20% a 50%: 67
+50% a 100%: 124
+
+
+
+
+
+
+
+
+
+
+
+TREIANMENTO DE 50 EPOCAS com augmentations
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      49/50      3.84G      1.021      1.051   0.003162          9        640: 100% ━━━━━━━━━━━━ 8/8 3.4it/s 2.3s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 7.8it/s 0.1s
+                   all         14        247      0.765      0.725      0.814      0.553
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      50/50      3.84G      1.023       1.14   0.003013          3        640: 100% ━━━━━━━━━━━━ 8/8 3.9it/s 2.1s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 7.8it/s 0.1s
+                   all         14        247      0.744      0.721      0.815      0.556
+
+
+
+===== RESULTADO FINAL =====
+mAP50-95: 0.555
+Precisão: 0.746
+Recall: 0.721
+Qualidade: 55.5%
+==========================
+
+
+===== RESUMO Predição =====
+0% a 20%: 0
+20% a 50%: 62
+50% a 100%: 95
