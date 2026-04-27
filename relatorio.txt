@@ -35,29 +35,44 @@ OBSERVAÇÃO
 
 
 
-
 TREIANMENTO DE 15 EPOCAS SEM augmentations
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-      14/15         0G      1.154      1.653   0.003277         29        640: 100% ━━━━━━━━━━━━ 8/8 11.7s/it 1:34
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 5.0s/it 5.0s
-                   all         14        341      0.692      0.589      0.693      0.458
+      14/15      3.88G      1.057       1.75   0.003063          8        640: 100% ━━━━━━━━━━━━ 8/8 3.6it/s 2.2s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 7.6it/s 0.1s
+                   all         14        189      0.789       0.72      0.787      0.556
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-      15/15         0G      1.022      1.619   0.002978          9        640: 100% ━━━━━━━━━━━━ 8/8 11.7s/it 1:34
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 5.9s/it 5.9s
-                   all         14        341      0.696      0.601      0.703      0.465
+      15/15      3.88G      1.142      1.707   0.003401          9        640: 100% ━━━━━━━━━━━━ 8/8 3.5it/s 2.3s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 7.6it/s 0.1s
+                   all         14        189      0.806      0.723      0.796       0.57
 
 
 
-===== RESULTADO FINAL =====
-mAP50-95: 0.465
-Precisão: 0.697
-Recall: 0.604
-Qualidade: 46.5%
+===== SEM AUGMENTATION =====
+
+===== RELATÓRIO FINAL última época =====
+Época: 15/15 ↑
+box_loss: 1.142 ↓
+cls_loss: 1.707 ↓
+dfl_loss: 0.003400 ↓
+Precisão (P): 0.806 ↑
+Recall (R): 0.723 ↑
+mAP50: 0.796 ↑
+mAP50-95: 0.570 ↑
+
+Relatório salvo em: /content/runs/detect/train-info
+
+===== RESULTADO FINAL DO DATASET =====
+mAP50-95: 0.570 ↑
+Precisão: 0.804 ↑
+Recall: 0.725 ↑
+Qualidade: 57.0% ↑
+==========================
 
 
-===== RESUMO PREDIÇÃO=====
+
+===== RESUMO PREDIÇÃO =====
 0-10%: 0   | 0.0%
 10-20%: 0   | 0.0%
 20-30%: 19   | 18.3%
@@ -68,9 +83,6 @@ Qualidade: 46.5%
 70-80%: 7   | 6.7%
 80-90%: 3   | 2.9%
 90-100%: 0   | 0.0%
-
-
-
 
 
 
