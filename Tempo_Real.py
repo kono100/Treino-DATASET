@@ -3,10 +3,10 @@ import cv2
 import matplotlib.pyplot as plt
 
 # Carrega modelo
-model = YOLO("pesos/best100.pt")
+model = YOLO("pesos/best3.pt")
 
 # Abre câmera
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 if not cap.isOpened():
     print("Erro ao abrir câmera")
