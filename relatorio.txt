@@ -199,3 +199,107 @@ Qualidade: 55.5%
 0% a 20%: 0
 20% a 50%: 62
 50% a 100%: 95
+
+
+TREIANMENTO DE 100 EPOCAS sem augmentations
+
+
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+     99/100      4.58G     0.8608      0.563   0.002631         19        640: 100% ━━━━━━━━━━━━ 8/8 3.6it/s 2.2s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 7.3it/s 0.1s
+                   all         14        189       0.85      0.862        0.9      0.706
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+    100/100      4.58G     0.7887     0.5671   0.002518         12        640: 100% ━━━━━━━━━━━━ 8/8 3.6it/s 2.2s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 7.9it/s 0.1s
+                   all         14        189      0.864      0.841        0.9      0.705
+
+
+===== SEM AUGMENTATION =====
+
+===== RELATÓRIO FINAL última época =====
+Época: 15/100 ↑
+box_loss: 1.142 ↓
+cls_loss: 1.707 ↓
+dfl_loss: 0.003400 ↓
+Precisão (P): 0.806 ↑
+Recall (R): 0.723 ↑
+mAP50: 0.796 ↑
+mAP50-95: 0.570 ↑
+
+
+===== RESULTADO FINAL DO DATASET =====
+mAP50-95: 0.715 ↑
+Precisão: 0.820 ↑
+Recall: 0.831 ↑
+Qualidade: 71.5% ↑
+==========================
+
+
+===== RESUMO PREDIÇÃO =====
+0-10%: 0   | 0.0%
+10-20%: 0   | 0.0%
+20-30%: 14   | 6.5%
+30-40%: 27   | 12.5%
+40-50%: 23   | 10.6%
+50-60%: 26   | 12.0%
+60-70%: 28   | 13.0%
+70-80%: 29   | 13.4%
+80-90%: 37   | 17.1%
+90-100%: 32   | 14.8%
+
+
+
+
+
+
+
+TREIANMENTO DE 100 EPOCAS com augmentations
+
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+     99/100      4.61G      1.241     0.8452   0.005039         19        640: 100% ━━━━━━━━━━━━ 8/8 2.9it/s 2.8s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 4.5it/s 0.2s
+                   all         14        189      0.834       0.85      0.913      0.659
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+    100/100      4.61G      1.189     0.7705   0.005079         11        640: 100% ━━━━━━━━━━━━ 8/8 3.2it/s 2.5s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 7.6it/s 0.1s
+                   all         14        189      0.838      0.852      0.912      0.658
+
+
+
+===== COM AUGMENTATION =====
+
+===== RELATÓRIO FINAL última época =====
+Época: 15/100 ↑
+box_loss: 1.142 ↓
+cls_loss: 1.707 ↓
+dfl_loss: 0.003400 ↓
+Precisão (P): 0.806 ↑
+Recall (R): 0.723 ↑
+mAP50: 0.796 ↑
+mAP50-95: 0.570 ↑
+
+
+
+===== RESULTADO FINAL DO DATASET =====
+mAP50-95: 0.658 ↑
+Precisão: 0.834 ↑
+Recall: 0.848 ↑
+Qualidade: 65.8% ↑
+==========================
+
+
+===== RESUMO PREDIÇÃO =====
+0-10%: 0   | 0.0%
+10-20%: 0   | 0.0%
+20-30%: 18   | 8.0%
+30-40%: 37   | 16.4%
+40-50%: 28   | 12.4%
+50-60%: 34   | 15.0%
+60-70%: 27   | 11.9%
+70-80%: 31   | 13.7%
+80-90%: 34   | 15.0%
+90-100%: 17   | 7.5%
