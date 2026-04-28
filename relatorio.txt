@@ -439,3 +439,215 @@ Qualidade: 64.3% ↑
 80-90%: 60   | 16.1%
 90-100%: 60   | 16.1%
 Salvo em: /content/runs/detect/predict-1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+
+
+
+
+
+
+
+
+
+
+benchmark de qual é o melhor AUGMENTATION
+
+
+
+
+
+
+
+
+
+
+
+
+# ===== CONFIGURAÇÕES =====
+configs = {
+    "FRACO": dict(
+        hsv_s=0.5, hsv_v=0.3,
+        degrees=5.0, translate=0.05, scale=0.3,
+        shear=0.0, perspective=0.0,
+        flipud=0.0, fliplr=0.3,
+        mosaic=0.3,
+        copy_paste=0.0
+    ),
+
+    "FRACO_OTIMIZADO": dict(
+        hsv_s=0.6, hsv_v=0.4,
+        degrees=8.0, translate=0.08, scale=0.35,
+        shear=0.0, perspective=0.0005,
+        flipud=0.0, fliplr=0.4,
+        mosaic=0.4,
+        copy_paste=0.05
+    ),
+
+    "MEDIO": dict(
+        hsv_s=0.7, hsv_v=0.4,
+        degrees=12.0, translate=0.1, scale=0.5,
+        shear=2.0, perspective=0.001,
+        flipud=0.0, fliplr=0.5,
+        mosaic=0.5,
+        copy_paste=0.1
+    ),
+
+    "FORTE": dict(
+        hsv_s=0.9, hsv_v=0.5,
+        degrees=20.0, translate=0.2, scale=0.7,
+        shear=5.0, perspective=0.002,
+        flipud=0.3, fliplr=0.5,
+        mosaic=1.0,
+        copy_paste=0.3
+    ),
+
+    "SEM_AUG": dict(
+        hsv_s=0.0, hsv_v=0.0,
+        degrees=0.0, translate=0.0, scale=0.0,
+        shear=0.0, perspective=0.0,
+        flipud=0.0, fliplr=0.0,
+        mosaic=0.0,
+        copy_paste=0.0
+    )
+}
+
+
+
+============================================================
+25 EPOCAS
+
+            Config  mAP50-95  Precisão    Recall  Qualidade (%)
+0            FRACO  0.610901  0.767246  0.771174      61.090106
+4          SEM_AUG  0.605265  0.891401  0.706422      60.526543
+1  FRACO_OTIMIZADO  0.570453  0.766635  0.752294      57.045257
+2            MEDIO  0.515273  0.743012  0.689656      51.527288
+3            FORTE  0.472580  0.658100  0.600408      47.257951
+
+Melhor config: FRACO
+
+
+
+
+====================================================
+50 EPOCAS
+
+
+            Config  mAP50-95  Precisão    Recall  Qualidade (%)
+0            FRACO  0.677931  0.767428  0.802752      67.793118
+4          SEM_AUG  0.648527  0.900333  0.756881      64.852689
+1  FRACO_OTIMIZADO  0.635517  0.800065  0.807667      63.551719
+2            MEDIO  0.600188  0.743490  0.771159      60.018813
+3            FORTE  0.525401  0.707416  0.754187      52.540111
+
+Melhor config: FRACO
+
+
+
+TESTE PREDICÇÃO DE 50 EPOCAS
+
+
+===== RESUMO PREDIÇÃO FRACO =====
+0-10%: 0   | 0.0%
+10-20%: 0   | 0.0%
+20-30%: 51   | 13.9%
+30-40%: 51   | 13.9%
+40-50%: 38   | 10.4%
+50-60%: 22   | 6.0%
+60-70%: 38   | 10.4%
+70-80%: 45   | 12.3%
+80-90%: 44   | 12.0%
+90-100%: 77   | 21.0%
+
+
+===== RESUMO PREDIÇÃO FRACO_OTIMIZADO =====
+0-10%: 0   | 0.0%
+10-20%: 0   | 0.0%
+20-30%: 36   | 10.1%
+30-40%: 48   | 13.5%
+40-50%: 47   | 13.2%
+50-60%: 33   | 9.3%
+60-70%: 41   | 11.5%
+70-80%: 44   | 12.4%
+80-90%: 40   | 11.3%
+90-100%: 66   | 18.6%
+
+
+===== RESUMO PREDIÇÃO MEDIO =====
+0-10%: 0   | 0.0%
+10-20%: 0   | 0.0%
+20-30%: 35   | 10.0%
+30-40%: 85   | 24.2%
+40-50%: 59   | 16.8%
+50-60%: 40   | 11.4%
+60-70%: 32   | 9.1%
+70-80%: 36   | 10.3%
+80-90%: 43   | 12.3%
+90-100%: 21   | 6.0%
+
+
+===== RESUMO PREDIÇÃO FORTE =====
+0-10%: 0   | 0.0%
+10-20%: 0   | 0.0%
+20-30%: 44   | 14.9%
+30-40%: 71   | 24.0%
+40-50%: 41   | 13.9%
+50-60%: 38   | 12.8%
+60-70%: 31   | 10.5%
+70-80%: 33   | 11.1%
+80-90%: 32   | 10.8%
+90-100%: 6   | 2.0%
+
+
+===== RESUMO PREDIÇÃO SEM_AUG =====
+0-10%: 0   | 0.0%
+10-20%: 0   | 0.0%
+20-30%: 16   | 5.0%
+30-40%: 27   | 8.4%
+40-50%: 19   | 5.9%
+50-60%: 21   | 6.5%
+60-70%: 13   | 4.0%
+70-80%: 30   | 9.3%
+80-90%: 35   | 10.9%
+90-100%: 161   | 50.0%
+
+
+===== RANKING PREDIÇÃO =====
+1º SEM_AUG → Confiança alta: 70.2%
+2º FRACO → Confiança alta: 45.4%
+3º FRACO_OTIMIZADO → Confiança alta: 42.3%
+4º MEDIO → Confiança alta: 28.5%
+5º FORTE → Confiança alta: 24.0%
+
+===== MELHOR MODELO =====
+Melhor: SEM_AUG
+Score (70-100%): 70.2%
+
+
+
+
+====================================================
+100 EPOCAS
+
