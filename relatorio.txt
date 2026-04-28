@@ -852,3 +852,51 @@ TESTE PREDICÇÃO DE 100 EPOCAS
 ===== MELHOR MODELO =====
 Melhor: SEM_AUG
 Score (70-100%): 72.1%
+
+
+
+
+analises e estudos iniciais
+
+  testes scripts
+
+  analisou as metricas da YOLO
+
+  analisou as metricas dos AUGMENTATIONS
+
+  yolo26n = nano
+
+
+
+
+
+
+
+
+--------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+proximos passos 
+
+arquiteturas de yolo  
+
+  analisar tempo a cada 100 epocas ou 1.000 epocas
+
+  nano 
+  small
+  medium
+  large
+
+
+
+
+talvez mudar imagem para 960
