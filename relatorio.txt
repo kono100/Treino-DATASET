@@ -30,6 +30,41 @@ Resumo: métricas como box_loss, cls_loss e dfl_loss indicam o aprendizado inter
 
 
 
+
+
+
+    # ===== AUGMENTATIONS ATIVOS (AJUSTADOS) =====
+    hsv_s=0.7,          # Ajuste de Saturação
+    hsv_v=0.4,          # Ajuste de Brilho
+    degrees=12.0,       # Rotação (reduzido)
+    translate=0.1,      # Translação
+    scale=0.5,          # Escala
+    shear=0.0,          # Cisalhamento (removido distorção)
+    perspective=0.001,  # Perspectiva leve
+    flipud=0.0,         # Inverter Cima/Baixo (desativado)
+    fliplr=0.5,         # Inverter Esquerda/Direita
+    copy_paste=0.1,     # Copiar e Colar
+    copy_paste_mode="flip",
+
+    # ===== IMPORTANTE PARA DATASET PEQUENO =====
+    mosaic=0.5,
+
+    # ===== AUGMENTATIONS DESATIVADOS =====
+    hsv_h=0.0,          # Ajuste de Matiz (DESATIVADO)
+    bgr=0.0,            # Troca de Canal BGR (DESATIVADO)
+    mixup=0.0,          # Mixup (DESATIVADO)
+    cutmix=0.0,         # CutMix (DESATIVADO)
+    erasing=0.0         # Apagamento Aleatório (DESATIVADO)
+
+
+
+
+
+
+
+
+
+
 OBSERVAÇÃO 
 
 
