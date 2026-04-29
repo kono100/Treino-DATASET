@@ -96,7 +96,7 @@ Melhor config: CUTMIX
 
 
 
-=== Ranking Precisão AUGMENTATIONS 30 epocas ===
+=== Ranking Precisão de PREDIÇÃO AUGMENTATIONS 30 epocas ===
 
 ranking Augmentation  50%+  50%-  Total  Score (%)
 
@@ -118,6 +118,91 @@ ranking Augmentation  50%+  50%-  Total  Score (%)
 15  unit_MIXUP        169   1954   2123    7.960433
 16  unit_PERSPECTIVE  121   1458   1579    7.663078
 17  unit_DEGREES       84   1621   1705    4.926686
+
+
+
+
+
+
+
+
+
+--------
+
+
+
+
+
+
+
+
+
+
+===== RANKING AUGMENTATIONS 50 epocas (MELHORES → PIORES) =====
+Ranking  Config  mAP50-95  Precisão    Recall  Qualidade (%)
+
+1      FLIP_UD  0.653664  0.785088  0.770830      65.366408
+2         HSV_H  0.645923  0.805041  0.752294      64.592331
+3          BGR  0.642301  0.791589  0.743119      64.230112
+4       CUTMIX  0.641964  0.836856  0.729433      64.196413
+5       MOSAIC  0.639262  0.766063  0.788991      63.926249
+6        MIXUP  0.636457  0.806931  0.747710      63.645711
+7       SEM_AUG  0.632114  0.808121  0.729358      63.211367
+
+8         HSV_V  0.632114  0.808121  0.729358      63.211367
+9        HSV_S  0.632114  0.808121  0.729358      63.211367
+10     TRANSLATE  0.632114  0.808121  0.729358      63.211367
+11       FLIP_LR  0.632114  0.808121  0.729358      63.211367
+12   COPY_PASTE  0.632114  0.808121  0.729358      63.211367
+13        SCALE  0.632114  0.808121  0.729358      63.211367
+14      ERASING  0.632114  0.808121  0.729358      63.211367
+15         SHEAR  0.632011  0.768278  0.745236      63.201146
+16   PERSPECTIVE  0.628722  0.805443  0.756881      62.872193
+17       DEGREES  0.614701  0.784037  0.732748      61.470144
+
+
+Melhor config: FLIP_UD
+
+
+
+
+
+
+=== Ranking Precisão de PREDIÇÃO AUGMENTATIONS 50 epocas ===
+
+ranking Augmentation  50%+  50%-  Total  Score (%)
+          Augmentation  50%+  50%-  Total  Score (%)
+1       unit_MOSAIC  227   952   1179  19.253605
+2          unit_BGR  199   985   1184  16.807432
+3       unit_CUTMIX  241  1239   1480  16.283784
+4      unit_FLIP_UD  243  1250   1493  16.275954
+5      unit_FLIP_LR  208  1103   1311  15.865751
+6        unit_SCALE  208  1103   1311  15.865751
+7      unit_ERASING  208  1103   1311  15.865751
+8        unit_HSV_S  208  1103   1311  15.865751
+9      unit_SEM_AUG  208  1103   1311  15.865751
+
+10        unit_HSV_V  208  1103   1311  15.865751
+11   unit_COPY_PASTE  208  1103   1311  15.865751
+12    unit_TRANSLATE  208  1103   1311  15.865751
+13        unit_SHEAR  209  1139   1348  15.504451
+14        unit_HSV_H  187  1045   1232  15.178571
+15     unit_DEGREES  180  1006   1186  15.177066
+16  unit_PERSPECTIVE  194  1162   1356  14.306785
+17        unit_MIXUP  218  1453   1671  13.046080
+
+
+Melhor augmentation: unit_MOSAIC
+
+
+
+
+
+
+
+
+
+
 
 
 
