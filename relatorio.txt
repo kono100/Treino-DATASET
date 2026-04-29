@@ -171,7 +171,6 @@ Melhor config: FLIP_UD
 === Ranking Precisão de PREDIÇÃO AUGMENTATIONS 50 epocas ===
 
 ranking Augmentation  50%+  50%-  Total  Score (%)
-          Augmentation  50%+  50%-  Total  Score (%)
 1       unit_MOSAIC  227   952   1179  19.253605
 2          unit_BGR  199   985   1184  16.807432
 3       unit_CUTMIX  241  1239   1480  16.283784
@@ -198,11 +197,69 @@ Melhor augmentation: unit_MOSAIC
 
 
 
+-----
+
+
+
+
+===== RANKING AUGMENTATIONS 100 epocas (MELHORES → PIORES) =====
+Ranking  Config  mAP50-95  Precisão    Recall  Qualidade (%)
 
 
 
 
 
+===== RANKING FINAL =====
+            Config  mAP50-95  Precisão    Recall  Qualidade (%)
+6  FINAL_CALIBRADO  0.743156  0.924210  0.871560      74.315614
+4     UNIT_FLIP_UD  0.702690  0.802901  0.853211      70.269001
+2         UNIT_BGR  0.688893  0.816996  0.807339      68.889252
+3      UNIT_CUTMIX  0.688080  0.833323  0.825628      68.808021
+5     UNIT_FLIP_LR  0.687399  0.829056  0.802752      68.739938
+1      UNIT_MOSAIC  0.678432  0.783225  0.845264      67.843211
+0          SEM_AUG  0.650745  0.876655  0.815065      65.074479
+
+Melhor config: FINAL_CALIBRADO
+
+===== RANKING FINAL =====
+            Config  mAP50-95  Precisão    Recall  Qualidade (%)
+6  FINAL_CALIBRADO  0.689273  0.850770  0.888325      68.927328
+3      UNIT_CUTMIX  0.686219  0.866087  0.822335      68.621858
+4     UNIT_FLIP_UD  0.684478  0.856238  0.816304      68.447813
+1      UNIT_MOSAIC  0.670442  0.830210  0.802030      67.044168
+2         UNIT_BGR  0.662125  0.787806  0.878173      66.212528
+5     UNIT_FLIP_LR  0.657252  0.864104  0.827411      65.725229
+0          SEM_AUG  0.608832  0.895563  0.827411      60.883183
+
+Melhor config: FINAL_CALIBRADO
+
+
+
+
+=== Ranking Precisão de PREDIÇÃO AUGMENTATIONS 100 epocas ===
+
+
+=== Ranking Precisão de PREDIÇÃO AUGMENTATIONS ===
+
+   Ranking     Augmentation  50%+  50%-  Total  Score (%)
+1          SEM_AUG   207   213    420  49.285714
+
+2  FINAL_CALIBRADO   199   367    566  35.159011
+3      UNIT_CUTMIX   192   438    630  30.476190
+4     UNIT_FLIP_UD   199   477    676  29.437870
+5     UNIT_BGR   184   450    634  29.022082
+6     UNIT_FLIP_LR   192   485    677  28.360414
+7      UNIT_MOSAIC   214   580    794  26.952141
+
+Melhor augmentation: SEM_AUG
+
+
+
+
+
+
+
+ranking Augmentation  50%+  50%-  Total  Score (%)
 
 
 
