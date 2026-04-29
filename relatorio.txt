@@ -65,6 +65,65 @@ Resumo: métricas como box_loss, cls_loss e dfl_loss indicam o aprendizado inter
 
 
 
+
+===== RANKING AUGMENTATIONS 30 epocas (MELHORES → PIORES) =====
+         Config  mAP50-95  Precisão    Recall  Qualidade (%)
+14       CUTMIX  0.613061  0.731112  0.720183      61.306096
+10      FLIP_UD  0.610300  0.747448  0.701835      61.029976
+11       MOSAIC  0.609188  0.711950  0.748290      60.918839
+7         SHEAR  0.585348  0.681532  0.761468      58.534760
+0       SEM_AUG  0.584157  0.702238  0.724771      58.415743
+
+6         SCALE  0.584157  0.702238  0.724771      58.415743
+1         HSV_S  0.584157  0.702238  0.724771      58.415743
+5     TRANSLATE  0.584157  0.702238  0.724771      58.415743
+2         HSV_V  0.584157  0.702238  0.724771      58.415743
+12   COPY_PASTE  0.584157  0.702238  0.724771      58.415743
+15      ERASING  0.584157  0.702238  0.724771      58.415743
+9       FLIP_LR  0.584157  0.702238  0.724771      58.415743
+3         HSV_H  0.582975  0.663892  0.775229      58.297453
+8   PERSPECTIVE  0.577978  0.722655  0.711009      57.797793
+13        MIXUP  0.569340  0.703311  0.674312      56.934017
+16          BGR  0.568380  0.767147  0.619618      56.838019
+4       DEGREES  0.565129  0.741277  0.670286      56.512944
+
+
+Melhor config: CUTMIX
+
+
+
+
+
+
+
+=== Ranking Precisão AUGMENTATIONS 30 epocas ===
+
+ranking Augmentation  50%+  50%-  Total  Score (%)
+
+1   unit_MOSAIC       206   1500   1706   12.075029
+2   unit_HSV_H        240   2017   2257   10.633584
+3   unit_FLIP_UD      194   1747   1941    9.994848
+4   unit_SHEAR        208   1916   2124    9.792844
+5   unit_CUTMIX       208   1976   2184    9.523810
+6   unit_HSV_S        147   1415   1562    9.411012
+7   unit_HSV_V        147   1415   1562    9.411012
+8   unit_SCALE        147   1415   1562    9.411012
+9   unit_FLIP_LR      147   1415   1562    9.411012
+10  unit_ERASING      147   1415   1562    9.411012
+11  unit_SEM_AUG      147   1415   1562    9.411012
+
+12  unit_TRANSLATE    147   1415   1562    9.411012
+13  unit_COPY_PASTE   147   1415   1562    9.411012
+14  unit_BGR          207   2079   2286    9.055118
+15  unit_MIXUP        169   1954   2123    7.960433
+16  unit_PERSPECTIVE  121   1458   1579    7.663078
+17  unit_DEGREES       84   1621   1705    4.926686
+
+
+
+
+
+
 OBSERVAÇÃO 
 
 
