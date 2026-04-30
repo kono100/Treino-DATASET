@@ -291,6 +291,72 @@ Melhor augmentation: SEM_AUG
 
 
 
+ultimo argumations testado e teve um bom RESULTADO
+
+    "FINAL_CALIBRADO": dict(
+        hsv_h=0.005, hsv_s=0.25, hsv_v=0.25,
+        degrees=2.0, translate=0.02, scale=0.08,
+        shear=0.2, perspective=0.0002,
+        fliplr=0.5, flipud=0.0,
+        mosaic=0.0, mixup=0.0, copy_paste=0.0,
+        erasing=0.05
+    )
+
+
+
+
+
+analise FINAL  dos 2 melhores AUGMENTATIONS 
+
+
+===== RANKING FINAL =====
+   Ranking           Config  mAP50-95  Precisão    Recall  Qualidade (%)
+0        1  FINAL_CALIBRADO  0.686031  0.899416  0.903553      68.603097
+1        2          SEM_AUG  0.635044  0.873542  0.806493      63.504354
+
+Melhor config: FINAL_CALIBRADO
+
+
+
+
+
+Predição
+
+=== RANKING FINAL PREDICÇÃO (BALANCEADO) ===
+   Ranking           Modelo  Detecções  Confiança Média  Score Final
+0        1          SEM_AUG        324         0.709478     1.000000
+1        2  FINAL_CALIBRADO        315         0.672490     0.960044
+
+=== ANÁLISE AUTOMÁTICA ===
+Melhor modelo geral: SEM_AUG
+- Detecta mais objetos
+- Tem maior confiança média
+
+Conclusão:
+O modelo SEM_AUG é o mais equilibrado entre quantidade e qualidade de detecção.
+
+
+ultimo argumations testado e teve um bom RESULTADO
+
+    "FINAL_CALIBRADO": dict(
+        hsv_h=0.005, hsv_s=0.25, hsv_v=0.25,
+        degrees=2.0, translate=0.02, scale=0.08,
+        shear=0.2, perspective=0.0002,
+        fliplr=0.5, flipud=0.0,
+        mosaic=0.0, mixup=0.0, copy_paste=0.0,
+        erasing=0.05
+    )
+
+
+
+
+
+
+
+
+
+
+
 
 OBSERVAÇÃO 
 
