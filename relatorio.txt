@@ -1182,7 +1182,252 @@ proximos passos
 
 arquiteturas de yolo  
 
-  analisar tempo a cada 100 epocas ou 1.000 epocas
+  analisar tempo a cada 100 epocas
+
+
+
+
+  yolo26 NANO 100 epocas treinadas COM gpu demorou =  5 minutos e 42 segundos.
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+    100/100      3.93G     0.9666     0.7769   0.003584          1        640: 100% ━━━━━━━━━━━━ 8/8 3.7it/s 2.1s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 8.0it/s 0.1s
+                   all         14        227      0.884      0.908      0.935      0.647
+
+100 epochs completed in 0.095 hours.
+
+
+===== COM AUGMENTATION (OTIMIZADO) =====
+
+===== RELATÓRIO FINAL última época =====
+Época: 100/100 ↑
+box_loss: 0.967 ↓
+cls_loss: 0.777 ↓
+dfl_loss: 0.003580 ↓
+Precisão (P): 0.884 ↑
+Recall (R): 0.908 ↑
+mAP50: 0.935 ↑
+mAP50-95: 0.647 ↑
+
+===== RESULTADO FINAL DO DATASET =====
+mAP50-95: 0.674 ↑
+Precisão: 0.877 ↑
+Recall: 0.912 ↑
+Qualidade: 67.4% ↑
+==========================
+
+===== RESUMO PREDIÇÃO =====
+0-10%: 0   | 0.0%
+10-20%: 0   | 0.0%
+20-30%: 39   | 9.5%
+30-40%: 52   | 12.7%
+40-50%: 39   | 9.5%
+50-60%: 35   | 8.6%
+60-70%: 39   | 9.5%
+70-80%: 51   | 12.5%
+80-90%: 64   | 15.6%
+90-100%: 90   | 22.0%
+Salvo em: /content/runs/detect/predict-1
+
+
+
+
+
+-----
+
+
+
+  yolo26 SMALL 100 epocas treinadas COM gpu demorou = 6 minutos e 57 segundos.
+
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+    100/100      5.91G      0.929     0.3403   0.003739          1        640: 100% ━━━━━━━━━━━━ 8/8 2.9it/s 2.8s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 5.8it/s 0.2s
+                   all         14        227      0.937      0.952      0.968       0.68
+
+100 epochs completed in 0.116 hours.
+
+
+
+===== COM AUGMENTATION (OTIMIZADO) =====
+
+===== RELATÓRIO FINAL última época =====
+Época: 100/100 ↑
+box_loss: 0.929 ↓
+cls_loss: 0.340 ↓
+dfl_loss: 0.003740 ↓
+Precisão (P): 0.937 ↑
+Recall (R): 0.952 ↑
+mAP50: 0.968 ↑
+mAP50-95: 0.680 ↑
+
+
+===== RESULTADO FINAL DO DATASET =====
+mAP50-95: 0.734 ↑
+Precisão: 0.941 ↑
+Recall: 0.903 ↑
+Qualidade: 73.4% ↑
+==========================
+
+
+
+===== RESUMO PREDIÇÃO =====
+0-10%: 0   | 0.0%
+10-20%: 0   | 0.0%
+20-30%: 10   | 2.4%
+30-40%: 22   | 5.3%
+40-50%: 20   | 4.8%
+50-60%: 29   | 7.0%
+60-70%: 21   | 5.0%
+70-80%: 50   | 12.0%
+80-90%: 132   | 31.7%
+90-100%: 133   | 31.9%
+Salvo em: /content/runs/detect/predict-2
+
+
+----
+
+  yolo26 MEDIUM 100 epocas treinadas COM gpu demorou =  15 minutos e 43 segundos.
+
+
+
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+    100/100      9.05G      0.784     0.3239   0.003019          1        640: 100% ━━━━━━━━━━━━ 8/8 1.6it/s 5.1s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 3.6it/s 0.3s
+                   all         14        227      0.934      0.934      0.975      0.713
+
+100 epochs completed in 0.262 hours.
+
+Results saved to /content/runs/detect/val-3
+
+===== COM AUGMENTATION (OTIMIZADO) =====
+
+===== RELATÓRIO FINAL última época =====
+Época: 100/100 ↑
+box_loss: 0.784 ↓
+cls_loss: 0.324 ↓
+dfl_loss: 0.003020 ↓
+Precisão (P): 0.934 ↑
+Recall (R): 0.934 ↑
+mAP50: 0.975 ↑
+mAP50-95: 0.713 ↑
+
+Relatório salvo em: /content/runs/detect/train-info
+
+===== RESULTADO FINAL DO DATASET =====
+mAP50-95: 0.749 ↑
+Precisão: 0.929 ↑
+Recall: 0.938 ↑
+Qualidade: 74.9% ↑
+==========================
+
+
+===== RESUMO PREDIÇÃO =====
+0-10%: 0   | 0.0%
+10-20%: 0   | 0.0%
+20-30%: 7   | 1.9%
+30-40%: 15   | 4.1%
+40-50%: 15   | 4.1%
+50-60%: 14   | 3.9%
+60-70%: 22   | 6.1%
+70-80%: 47   | 13.0%
+80-90%: 135   | 37.3%
+90-100%: 107   | 29.6%
+Salvo em: /content/runs/detect/predict-3
+
+
+
+
+
+
+
+
+
+----
+
+
+
+
+  yolo26 LARGE 100 epocas treinadas COM gpu demorou =  25 minutos e 44 segundos.
+
+
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+    100/100      11.2G     0.7112     0.2657   0.002582          1        640: 100% ━━━━━━━━━━━━ 8/8 1.4it/s 5.8s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 2.6it/s 0.4s
+                   all         14        227      0.923      0.952      0.951      0.706
+
+100 epochs completed in 0.429 hours.
+
+Results saved to /content/runs/detect/val-4
+
+===== COM AUGMENTATION (OTIMIZADO) =====
+
+===== RELATÓRIO FINAL última época =====
+Época: 100/100 ↑
+box_loss: 0.711 ↓
+cls_loss: 0.266 ↓
+dfl_loss: 0.002580 ↓
+Precisão (P): 0.923 ↑
+Recall (R): 0.952 ↑
+mAP50: 0.951 ↑
+mAP50-95: 0.706 ↑
+
+Relatório salvo em: /content/runs/detect/train-info
+
+===== RESULTADO FINAL DO DATASET =====
+mAP50-95: 0.746 ↑
+Precisão: 0.934 ↑
+Recall: 0.947 ↑
+Qualidade: 74.6% ↑
+==========================
+
+
+
+
+===== RESUMO PREDIÇÃO =====
+0-10%: 0   | 0.0%
+10-20%: 0   | 0.0%
+20-30%: 15   | 4.0%
+30-40%: 20   | 5.3%
+40-50%: 19   | 5.1%
+50-60%: 27   | 7.2%
+60-70%: 28   | 7.5%
+70-80%: 53   | 14.2%
+80-90%: 212   | 56.7%
+90-100%: 0   | 0.0%
+Salvo em: /content/runs/detect/predict-4
+
+
+
+
+
+
+
+
+
+
+----
+
+
+
+📊 📈 Ranking real (qualidade)
+Modelo	mAP50-95	Precisão	Recall	Tempo	Qualidade
+🥇 MEDIUM	0.749	  0.929	    0.938	  15min  74.9%
+🥈 LARGE	0.746 	0.934	    0.947	  25min	 74.6%
+🥉 SMALL	0.734 	0.941	    0.903	  7min	 73.4%
+4º NANO   0.674	  0.877	    0.912	  5min	  67.4%
+
+
+
+
+
+
+
+
+
+
 
   nano 
   small
@@ -1193,3 +1438,90 @@ arquiteturas de yolo
 
 
 talvez mudar imagem para 960
+
+
+
+
+
+
+
+
+analisar qual epoca para de aprender
+
+
+
+
+
+
+
+
+
+treino 584 epocas
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+   583/1000      9.16G     0.6557     0.2451   0.002047          6        640: 100% ━━━━━━━━━━━━ 8/8 1.6it/s 5.0s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 3.8it/s 0.3s
+                   all         14        227      0.959      0.907      0.963      0.738
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+   584/1000      9.17G     0.6214     0.2262   0.002027          5        640: 100% ━━━━━━━━━━━━ 8/8 1.6it/s 5.0s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 3.4it/s 0.3s
+                   all         14        227      0.918      0.965      0.966      0.754
+EarlyStopping: Training stopped early as no improvement observed in last 100 epochs. Best results observed at epoch 484, best model saved as best.pt.
+To update EarlyStopping(patience=100) pass a new patience value, i.e. `patience=300` or use `patience=0` to disable EarlyStopping.
+
+584 epochs completed in 1.728 hours.
+Optimizer stripped from /content/runs/detect/train-5/weights/last.pt, 44.1MB
+Optimizer stripped from /content/runs/detect/train-5/weights/best.pt, 44.1MB
+
+Validating /content/runs/detect/train-5/weights/best.pt...
+Ultralytics 8.4.46 🚀 Python-3.12.13 torch-2.10.0+cu128 CUDA:0 (Tesla T4, 14913MiB)
+YOLO26m summary (fused): 132 layers, 20,350,223 parameters, 0 gradients, 67.8 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 3.0it/s 0.3s
+                   all         14        227      0.939      0.951      0.974      0.761
+Speed: 0.2ms preprocess, 13.0ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to /content/runs/detect/train-5
+Ultralytics 8.4.46 🚀 Python-3.12.13 torch-2.10.0+cu128 CUDA:0 (Tesla T4, 14913MiB)
+YOLO26m summary (fused): 132 layers, 20,350,223 parameters, 0 gradients, 67.8 GFLOPs
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 3025.3±440.9 MB/s, size: 550.8 KB)
+val: Scanning /content/datasets/YOLO_BROCAS/labels/valid.cache... 14 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 14/14 4.2Mit/s 0.0s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 1.1it/s 0.9s
+                   all         14        227      0.934      0.952      0.971      0.761
+Speed: 0.8ms preprocess, 29.5ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to /content/runs/detect/val-5
+
+===== COM AUGMENTATION (OTIMIZADO) =====
+
+===== RELATÓRIO FINAL última época =====
+Época: 584/1000 ↑
+box_loss: 0.621 ↓
+cls_loss: 0.226 ↓
+dfl_loss: 0.002030 ↓
+Precisão (P): 0.918 ↑
+Recall (R): 0.965 ↑
+mAP50: 0.966 ↑
+mAP50-95: 0.754 ↑
+
+Relatório salvo em: /content/runs/detect/train-info
+
+===== RESULTADO FINAL DO DATASET =====
+mAP50-95: 0.761 ↑
+Precisão: 0.934 ↑
+Recall: 0.952 ↑
+Qualidade: 76.1% ↑
+==========================
+
+
+
+===== RESUMO PREDIÇÃO =====
+0-10%: 0   | 0.0%
+10-20%: 0   | 0.0%
+20-30%: 4   | 1.1%
+30-40%: 6   | 1.7%
+40-50%: 11   | 3.1%
+50-60%: 18   | 5.0%
+60-70%: 20   | 5.6%
+70-80%: 29   | 8.1%
+80-90%: 64   | 17.8%
+90-100%: 207   | 57.7%
+Salvo em: /content/runs/detect/predict-6
