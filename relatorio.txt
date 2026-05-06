@@ -29,9 +29,7 @@ Resumo: métricas como box_loss, cls_loss e dfl_loss indicam o aprendizado inter
 
 
 
-
-
-
+1)aug
 
     # ===== AUGMENTATIONS ATIVOS (AJUSTADOS) =====
     hsv_s=0.7,          # Ajuste de Saturação
@@ -59,7 +57,29 @@ Resumo: métricas como box_loss, cls_loss e dfl_loss indicam o aprendizado inter
 
 
 
+2)aug DE TEST 2 MELHOR
 
+
+# ===== AUG FINAL REAL (BASEADO NOS SEUS TESTES) =====
+FINAL_REAL = dict(
+    fliplr=0.5,      # 🥇 melhor absoluto
+    flipud=0.3,      # 🥉 consistente
+    translate=0.08,  # 🥈 forte
+
+    hsv_h=0.05,
+    hsv_s=0.5,
+    hsv_v=0.4,
+
+    scale=0.15,      # leve só pra generalizar
+    mosaic=0.2,      # bem controlado
+    mixup=0.03,      # quase desligado
+
+    degrees=0.0,
+    shear=0.0,
+    perspective=0.0,
+    copy_paste=0.0,
+    erasing=0.0
+)
 
 
 
@@ -138,7 +158,7 @@ ranking Augmentation  50%+  50%-  Total  Score (%)
 
 
 
-===== RANKING AUGMENTATIONS unitarias 50 epocas (MELHORES → PIORES) =====
+===== test 1 RANKING AUGMENTATIONS unitarias 50 epocas (MELHORES → PIORES) =====
 Ranking  Config  mAP50-95  Precisão    Recall  Qualidade (%)
 
 1      FLIP_UD  0.653664  0.785088  0.770830      65.366408
@@ -164,11 +184,68 @@ Ranking  Config  mAP50-95  Precisão    Recall  Qualidade (%)
 Melhor config: FLIP_UD
 
 
+===== test 2 RANKING AUGMENTATIONS unitarias 50 epocas (MELHORES → PIORES) =====
+
+===== RANKING (MELHORES → PIORES) =====
+         Config  mAP50-95  Precisão    Recall  Qualidade (%)
+11       MOSAIC  0.675466  0.871414  0.897590      67.546643
+6         SCALE  0.674213  0.921561  0.843373      67.421306
+5     TRANSLATE  0.662238  0.864358  0.882922      66.223847
+8   PERSPECTIVE  0.654311  0.911119  0.915663      65.431065
+10      FLIP_UD  0.652843  0.836878  0.879518      65.284335
+0       SEM_AUG  0.650802  0.879826  0.843373      65.080195
+
+12   COPY_PASTE  0.650802  0.879826  0.843373      65.080195
+15      ERASING  0.650802  0.879826  0.843373      65.080195
+13        MIXUP  0.648112  0.889039  0.801205      64.811217
+9       FLIP_LR  0.645220  0.900785  0.807229      64.522028
+2         HSV_V  0.640508  0.882473  0.813253      64.050829
+14       CUTMIX  0.639340  0.838997  0.861446      63.933998
+3         HSV_H  0.635508  0.849959  0.853148      63.550839
+7         SHEAR  0.633729  0.814779  0.891566      63.372850
+16          BGR  0.633511  0.849351  0.837349      63.351076
+1         HSV_S  0.626548  0.824990  0.851931      62.654761
+4       DEGREES  0.567426  0.833449  0.844079      56.742627
+
+Melhor config: MOSAIC
+
+
+
+===== test 3 RANKING AUGMENTATIONS unitarias 50 epocas (MELHORES → PIORES) =====
 
 
 
 
-=== Ranking Precisão de PREDIÇÃO AUGMENTATIONS unitarias 50 epocas ===
+===== RANKING (MELHORES → PIORES) =====
+         Config  mAP50-95  Precisão    Recall  Qualidade (%)
+6         SCALE  0.703972  0.912213  0.876372      70.397230
+11       MOSAIC  0.682156  0.884197  0.879518      68.215557
+10      FLIP_UD  0.666487  0.863058  0.825301      66.648656
+8   PERSPECTIVE  0.658849  0.862377  0.891566      65.884892
+5     TRANSLATE  0.654227  0.885120  0.881874      65.422676
+1         HSV_S  0.653184  0.833265  0.873068      65.318423
+0       SEM_AUG  0.650802  0.879826  0.843373      65.080195
+
+15      ERASING  0.650802  0.879826  0.843373      65.080195
+12   COPY_PASTE  0.650802  0.879826  0.843373      65.080195
+7         SHEAR  0.649152  0.860380  0.853822      64.915222
+13        MIXUP  0.646592  0.881054  0.819277      64.659228
+14       CUTMIX  0.637906  0.839175  0.848708      63.790587
+9       FLIP_LR  0.635944  0.825310  0.897590      63.594445
+2         HSV_V  0.632278  0.820068  0.851133      63.227849
+16          BGR  0.631297  0.771201  0.831325      63.129726
+3         HSV_H  0.629830  0.839100  0.873494      62.983031
+4       DEGREES  0.592569  0.915760  0.855422      59.256869
+
+
+Melhor config: SCALE
+
+
+
+
+
+
+=== test 1 Ranking Precisão de PREDIÇÃO AUGMENTATIONS unitarias 50 epocas ===
 
 ranking Augmentation  50%+  50%-  Total  Score (%)
 1       unit_MOSAIC  227   952   1179  19.253605
@@ -197,9 +274,115 @@ Melhor augmentation: unit_MOSAIC
 
 
 
+
+===  test 2 Ranking Precisão de PREDIÇÃO AUGMENTATIONS unitarias 50 epocas ===
+
+    Ranking Augmentation  Detecções  Confiança Média
+0         1        MIXUP        223         0.805029
+1         2   COPY_PASTE        219         0.852855
+2         3      SEM_AUG        219         0.852855
+
+3         4      ERASING        219         0.852855
+4         5        SCALE        217         0.780433
+5         6      FLIP_UD        214         0.829652
+6         7       MOSAIC        211         0.875662
+7         8        HSV_V        208         0.850994
+8         9        HSV_S        206         0.835814
+9        10  PERSPECTIVE        205         0.849109
+10       11       CUTMIX        205         0.828771
+11       12      FLIP_LR        203         0.857652
+12       13        HSV_H        201         0.856468
+13       14          BGR        201         0.819793
+14       15        SHEAR        198         0.854001
+15       16    TRANSLATE        196         0.783289
+16       17      DEGREES        173         0.697100
+
+
+Melhor augmentation: MIXUP 
+
+
+
+
+
+
+
+===  test 3 Ranking Precisão de PREDIÇÃO AUGMENTATIONS unitarias 50 epocas ===
+
+
+
+=== RANKING FINAL PREDIÇÃO ===
+    Ranking Augmentation  Detecções  Confiança Média
+0         1      DEGREES        221         0.796766
+1         2   COPY_PASTE        219         0.852855
+2         3      SEM_AUG        219         0.852855
+3         4      ERASING        219         0.852855
+4         5          BGR        215         0.870401
+5         6        SCALE        214         0.816170
+6         7  PERSPECTIVE        206         0.791295
+7         8        HSV_H        206         0.841434
+8         9        HSV_V        204         0.854450
+9        10      FLIP_LR        202         0.857787
+10       11        SHEAR        201         0.829735
+11       12       MOSAIC        201         0.875317
+12       13       CUTMIX        197         0.874949
+13       14        HSV_S        197         0.887877
+14       15    TRANSLATE        196         0.865055
+15       16        MIXUP        194         0.805795
+16       17      FLIP_UD        192         0.822995
+
+
+
+=== Ranking Precisão de PREDIÇÃO AUGMENTATIONS ===
+    Ranking Augmentation  50%+  50%-  Total  Score (%)
+0         1      FLIP_LR   189   141    330  57.272727
+1         2    TRANSLATE   182   146    328  55.487805
+2         3      FLIP_UD   165   148    313  52.715655
+3         4        HSV_H   185   169    354  52.259887
+4         5          BGR   196   208    404  48.514851
+5         6       CUTMIX   185   197    382  48.429319
+6         7        HSV_S   188   204    392  47.959184
+7         8        HSV_V   181   202    383  47.258486
+8         9  PERSPECTIVE   180   206    386  46.632124
+9        10        MIXUP   172   206    378  45.502646
+10       11        SHEAR   178   214    392  45.408163
+11       12        SCALE   187   234    421  44.418052
+12       13       MOSAIC   189   244    433  43.648961
+13       14      DEGREES   190   255    445  42.696629
+14       15   COPY_PASTE   194   314    508  38.188976
+15       16      SEM_AUG   194   314    508  38.188976
+
+16       17      ERASING   194   314    508  38.188976
+
+Salvo em: /content/runs/detect/ranking_predicao_unitarios.csv
+Melhor augmentation: FLIP_LR
+
 -----
 
 
+
+
+
+
+
+
+
+treino 100 epocas
+
+===== RANKING FINAL =====
+   Ranking      Config  mAP50-95  Precisão    Recall  Qualidade (%)
+0        1  FINAL_REAL  0.722721  0.893256  0.957808      72.272086
+1        2     SEM_AUG  0.644682  0.836665  0.833164      64.468223
+
+Melhor config: FINAL_REAL
+
+
+
+ predição
+
+=== Ranking Precisão de PREDIÇÃO AUGMENTATIONS ===
+   Ranking   Augmentation  50%+  50%-  Total  Score (%)
+0        1     FINAL_REAL   192   182    374  51.336898
+1        2  final_SEM_AUG   188   278    466  40.343348
 
 
 ===== RANKING AUGMENTATIONS unitarias 100 epocas (MELHORES → PIORES) =====
@@ -1150,6 +1333,8 @@ Score (70-100%): 72.1%
 
 
 analises e estudos iniciais
+
+
 
   testes scripts
 
