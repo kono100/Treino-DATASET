@@ -1710,3 +1710,19 @@ Qualidade: 76.1% ↑
 80-90%: 64   | 17.8%
 90-100%: 207   | 57.7%
 Salvo em: /content/runs/detect/predict-6
+
+
+
+como relmente funciona a augmentation da yolo ultraanalitcs nas ultimas versões
+
+
+quantas imagens são geradas por augmentation por epocas no padrão
+
+
+os augmentations sempre são os mesmo ou muda por epocas
+
+
+treinar 100  sem augmentation zerado,  com augmenttion padrão nativo, OTIMIZADO
+colocar em um grafico de barraas comparando todos os valores
+
+
